@@ -2,11 +2,29 @@
     {
         "name": "基本",
         "cards": [
+            {"name": "地下貯蔵庫", "cost": 2, "expansion": "基本"},
             {"name": "礼拝堂", "cost": 2, "expansion": "基本"},
+            {"name": "堀", "cost": 2, "expansion": "基本"},
+            {"name": "家臣", "cost": 3, "expansion": "基本"},
+            {"name": "工房", "cost": 3, "expansion": "基本"},
+            {"name": "商人", "cost": 3, "expansion": "基本"},
+            {"name": "前駆者", "cost": 3, "expansion": "基本"},
             {"name": "村", "cost": 3, "expansion": "基本"},
-            {"name": "木こり", "cost": 3, "expansion": "基本"},
+            {"name": "改築", "cost": 4, "expansion": "基本"},
             {"name": "鍛冶屋", "cost": 4, "expansion": "基本"},
-            {"name": "市場", "cost": 5, "expansion": "基本"}
+            {"name": "金貸し", "cost": 4, "expansion": "基本"},
+            {"name": "玉座の間", "cost": 4, "expansion": "基本"},
+            {"name": "密猟者", "cost": 4, "expansion": "基本"},
+            {"name": "民兵", "cost": 4, "expansion": "基本"},
+            {"name": "役人", "cost": 4, "expansion": "基本"},
+            {"name": "庭園", "cost": 4, "expansion": "基本"},
+            {"name": "市場", "cost": 5, "expansion": "基本"},
+            {"name": "衛兵", "cost": 5, "expansion": "基本"},
+            {"name": "議事堂", "cost": 5, "expansion": "基本"},
+            {"name": "研究所", "cost": 5, "expansion": "基本"},
+            {"name": "鉱山", "cost": 5, "expansion": "基本"},
+            {"name": "魔女", "cost": 5, "expansion": "基本"},
+            {"name": "職人", "cost": 6, "expansion": "基本"},
         ]
     },
     {
