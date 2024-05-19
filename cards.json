@@ -89,7 +89,7 @@
             {"name": "コルセア", "cost": 5, "expansion": "海辺"},
             {"name": "海賊", "cost": 5, "expansion": "海辺"}
         ]
-    }
+    },
     {
         "name": "錬金術",
         "cards": [
@@ -106,7 +106,7 @@
             {"name": "弟子", "cost": 5, "expansion": "錬金術"},
             {"name": "支配", "cost": "6+P", "expansion": "錬金術"}
         ]
-    }
+    },
     {
         "name": "繁栄",
         "cards": [
@@ -136,7 +136,7 @@
             {"name": "銀行", "cost": 7, "expansion": "繁栄"},
             {"name": "行商人", "cost": "8*", "expansion": "繁栄"}
         ]
-    }
+    },
     {
         "name": "収穫祭",
         "cards": [
@@ -154,7 +154,7 @@
             {"name": "豊穣の角笛", "cost": 5, "expansion": "収穫祭"},
             {"name": "品評会", "cost": 6, "expansion": "収穫祭"}
         ]
-    }
+    },
     {
         "name": "ギルド",
         "cards": [
