@@ -94,24 +94,9 @@ function reroll() {
                     });
                 }
             });
-            cards.sort((a, b) => a.cost - b.cost);
-            const selectedCardsArray = [];
-            while (selectedCardsArray.length < 10 && cards.length > 0) {
-                const randomIndex = Math.floor(Math.random() * cards.length);
-                const selectedCard = cards.splice(randomIndex, 1)[0];
-                if (!selectedCards.has(selectedCard.name)) {
-                    selectedCards.add(selectedCard.name);
-                    selectedCardsArray.push(selectedCard);
-                }
-            }
+            const selectedCardsArray = selectRandomCards(cards, 10);
             selectedCardsArray.forEach(card => {
-                const cardDiv = document.createElement('div');
-                cardDiv.innerHTML = `(${card.cost}) ${card.name} ${card.expansion}`;
-                cardDiv.classList.add('card-item');
-                cardDiv.addEventListener('click', () => {
-                    cardDiv.classList.toggle('selected-card');
-                });
-                cardListDiv.appendChild(cardDiv);
+                addCardToList(cardListDiv, card);
             });
         });
 }
@@ -120,11 +105,13 @@ function selectReroll() {
     const cardListDiv = document.getElementById('cardList');
     const selectedDivs = cardListDiv.getElementsByClassName('selected-card');
     const selectedCardNames = [];
-    for (let div of selectedDivs) {
+    while (selectedDivs.length > 0) {
+        const div = selectedDivs[0];
         const cardText = div.innerText;
         const cardName = cardText.match(/\d\) (.*?) /)[1];
         selectedCardNames.push(cardName);
         selectedCards.delete(cardName);
+        cardListDiv.removeChild(div);
     }
 
     fetch('cards.json')
@@ -140,30 +127,42 @@ function selectReroll() {
                     });
                 }
             });
-            cards.sort((a, b) => a.cost - b.cost);
-            const newSelectedCards = [];
-            selectedCardNames.forEach(cardName => {
-                let newCard;
-                do {
-                    const randomIndex = Math.floor(Math.random() * cards.length);
-                    newCard = cards[randomIndex];
-                } while (selectedCards.has(newCard.name) || selectedCardNames.includes(newCard.name));
-                selectedCards.add(newCard.name);
-                newSelectedCards.push(newCard);
-            });
-            for (let div of selectedDivs) {
-                cardListDiv.removeChild(div);
-            }
+            const newSelectedCards = selectRandomCards(cards, selectedCardNames.length);
             newSelectedCards.forEach(card => {
-                const cardDiv = document.createElement('div');
-                cardDiv.innerHTML = `(${card.cost}) ${card.name} ${card.expansion}`;
-                cardDiv.classList.add('card-item');
-                cardDiv.addEventListener('click', () => {
-                    cardDiv.classList.toggle('selected-card');
-                });
-                cardListDiv.appendChild(cardDiv);
+                addCardToList(cardListDiv, card);
             });
         });
+}
+
+function selectRandomCards(cards, count) {
+    const selectedCardsArray = [];
+    while (selectedCardsArray.length < count && cards.length > 0) {
+        const randomIndex = Math.floor(Math.random() * cards.length);
+        const selectedCard = cards.splice(randomIndex, 1)[0];
+        if (!selectedCards.has(selectedCard.name)) {
+            selectedCards.add(selectedCard.name);
+            selectedCardsArray.push(selectedCard);
+        }
+    }
+    return selectedCardsArray.sort((a, b) => {
+        const aCost = parseCost(a.cost);
+        const bCost = parseCost(b.cost);
+        return aCost - bCost || (a.cost > b.cost ? 1 : -1);
+    });
+}
+
+function parseCost(cost) {
+    return parseInt(cost.replace(/\D/g, ''), 10) || 0;
+}
+
+function addCardToList(cardListDiv, card) {
+    const cardDiv = document.createElement('div');
+    cardDiv.innerHTML = `(${card.cost}) ${card.name} ${card.expansion}`;
+    cardDiv.classList.add('card-item');
+    cardDiv.addEventListener('click', () => {
+        cardDiv.classList.toggle('selected-card');
+    });
+    cardListDiv.appendChild(cardDiv);
 }
 
 function toggleUnusedCards() {
