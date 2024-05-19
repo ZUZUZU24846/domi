@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominion Randomizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tabs">
+        <button class="tablink" onclick="openTab(event, 'Main')">メイン</button>
+        <button class="tablink" onclick="openTab(event, 'Expansion')">拡張セット</button>
+        <button class="tablink" onclick="openTab(event, 'Settings')">設定</button>
+    </div>
+
+    <div id="Main" class="tabcontent">
+        <div id="cardList"></div>
+        <button id="rerollButton" onclick="reroll()">リロール</button>
+        <button id="selectRerollButton" onclick="selectReroll()">選択リロール</button>
+    </div>
+
+    <div id="Expansion" class="tabcontent">
+        <div id="expansionList"></div>
+    </div>
+
+    <div id="Settings" class="tabcontent">
+        <button onclick="toggleUnusedCards()">未使用カードの選択</button>
+        <div id="unusedCards" style="display:none;">
+            <!-- Unused cards list will be populated here -->
+        </div>
+        <label>
+            <input type="checkbox" id="saveSelection">すべての選択を保存
+        </label>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

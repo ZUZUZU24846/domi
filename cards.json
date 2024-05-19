@@ -1,0 +1,29 @@
+[
+    {
+        "name": "基本",
+        "cards": [
+            {"name": "礼拝堂", "cost": 2, "expansion": "基本"},
+            {"name": "村", "cost": 3, "expansion": "基本"},
+            {"name": "木こり", "cost": 3, "expansion": "基本"},
+            {"name": "鍛冶屋", "cost": 4, "expansion": "基本"},
+            {"name": "市場", "cost": 5, "expansion": "基本"}
+        ]
+    },
+    {
+        "name": "陰謀",
+        "cards": [
+            {"name": "手先", "cost": 2, "expansion": "陰謀"},
+            {"name": "鉱山の村", "cost": 4, "expansion": "陰謀"},
+            {"name": "橋", "cost": 4, "expansion": "陰謀"},
+            {"name": "交易場", "cost": 5, "expansion": "陰謀"}
+        ]
+    },
+    {
+        "name": "海辺",
+        "cards": [
+            {"name": "灯台", "cost": 2, "expansion": "海辺"},
+            {"name": "策士", "cost": 5, "expansion": "海辺"},
+            {"name": "巾着切り", "cost": 4, "expansion": "海辺"}
+        ]
+    }
+]
