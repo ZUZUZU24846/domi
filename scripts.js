@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     loadExpansions();
     loadUnusedCards();
-    document.getElementById('saveSelection').addEventListener('change', saveSelections);
 });
 
 let selectedExpansions = [];
@@ -51,10 +50,14 @@ function loadUnusedCards() {
             const unusedCardsDiv = document.getElementById('unusedCards');
             data.forEach(expansion => {
                 const expansionDiv = document.createElement('div');
-                expansionDiv.innerHTML = `<strong>${expansion.name}</strong>`;
+                expansionDiv.classList.add('expansion-section');
+                const expansionTitle = document.createElement('strong');
+                expansionTitle.innerText = expansion.name;
+                expansionDiv.appendChild(expansionTitle);
                 expansion.cards.forEach(card => {
                     const label = document.createElement('label');
                     label.innerHTML = `<input type="checkbox" id="unused-${card.name}" onchange="toggleUnusedCard('${expansion.name}', '${card.name}')"> ${card.name}`;
+                    label.classList.add('card-item');
                     expansionDiv.appendChild(label);
                 });
                 unusedCardsDiv.appendChild(expansionDiv);
