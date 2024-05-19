@@ -24,7 +24,7 @@
             {"name": "研究所", "cost": 5, "expansion": "基本"},
             {"name": "鉱山", "cost": 5, "expansion": "基本"},
             {"name": "魔女", "cost": 5, "expansion": "基本"},
-            {"name": "職人", "cost": 6, "expansion": "基本"},
+            {"name": "職人", "cost": 6, "expansion": "基本"}
         ]
     },
     {
