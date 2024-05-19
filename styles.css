@@ -50,3 +50,14 @@ body {
 #selectRerollButton {
     left: 150px;
 }
+.tabcontent {
+    display: none;
+}
+
+.tablink {
+    cursor: pointer;
+}
+
+.selected-card {
+    background-color: yellow; /* 選択されたカードの背景色 */
+}
