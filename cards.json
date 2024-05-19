@@ -24,24 +24,155 @@
             {"name": "研究所", "cost": 5, "expansion": "基本"},
             {"name": "鉱山", "cost": 5, "expansion": "基本"},
             {"name": "魔女", "cost": 5, "expansion": "基本"},
-            {"name": "職人", "cost": 6, "expansion": "基本"}
+            {"name": "職人", "cost": 6, "expansion": "基本"},
         ]
     },
     {
         "name": "陰謀",
         "cards": [
             {"name": "手先", "cost": 2, "expansion": "陰謀"},
+            {"name": "中庭", "cost": 2, "expansion": "陰謀"},
+            {"name": "待ち伏せ", "cost": 2, "expansion": "陰謀"},
+            {"name": "仮面舞踏会", "cost": 3, "expansion": "陰謀"},
+            {"name": "執事", "cost": 3, "expansion": "陰謀"},
+            {"name": "願いの井戸", "cost": 3, "expansion": "陰謀"},
+            {"name": "貧民街", "cost": 3, "expansion": "陰謀"},
+            {"name": "詐欺師", "cost": 3, "expansion": "陰謀"},
+            {"name": "隠し通路", "cost": 4, "expansion": "陰謀"},
+            {"name": "共謀者", "cost": 4, "expansion": "陰謀"},
             {"name": "鉱山の村", "cost": 4, "expansion": "陰謀"},
+            {"name": "男爵", "cost": 4, "expansion": "陰謀"},
+            {"name": "鉄工所", "cost": 4, "expansion": "陰謀"},
             {"name": "橋", "cost": 4, "expansion": "陰謀"},
-            {"name": "交易場", "cost": 5, "expansion": "陰謀"}
+            {"name": "外交官", "cost": 4, "expansion": "陰謀"},
+            {"name": "風車", "cost": 4, "expansion": "陰謀"},
+            {"name": "改良", "cost": 5, "expansion": "陰謀"},
+            {"name": "交易場", "cost": 5, "expansion": "陰謀"},
+            {"name": "廷臣", "cost": 5, "expansion": "陰謀"},
+            {"name": "パトロール", "cost": 5, "expansion": "陰謀"},
+            {"name": "拷問人", "cost": 5, "expansion": "陰謀"},
+            {"name": "寵臣", "cost": 5, "expansion": "陰謀"},
+            {"name": "身代わり", "cost": 5, "expansion": "陰謀"},
+            {"name": "公爵", "cost": 5, "expansion": "陰謀"},
+            {"name": "貴族", "cost": 6, "expansion": "陰謀"},
+            {"name": "ハーレム", "cost": 6, "expansion": "陰謀"}
+        ]
+    }
         ]
     },
     {
         "name": "海辺",
         "cards": [
+            {"name": "原住民の村", "cost": 2, "expansion": "海辺"},
+            {"name": "停泊所", "cost": 2, "expansion": "海辺"},
             {"name": "灯台", "cost": 2, "expansion": "海辺"},
+            {"name": "海図", "cost": 3, "expansion": "海辺"},
+            {"name": "倉庫", "cost": 3, "expansion": "海辺"},
+            {"name": "密輸人", "cost": 3, "expansion": "海辺"},
+            {"name": "見張り", "cost": 3, "expansion": "海辺"},
+            {"name": "漁村", "cost": 3, "expansion": "海辺"},
+            {"name": "サル", "cost": 3, "expansion": "海辺"},
+            {"name": "アストロラーベ", "cost": 3, "expansion": "海辺"},
+            {"name": "宝の地図", "cost": 4, "expansion": "海辺"},
+            {"name": "引揚水夫", "cost": 4, "expansion": "海辺"},
+            {"name": "巾着切り", "cost": 4, "expansion": "海辺"},
+            {"name": "潮溜り", "cost": 4, "expansion": "海辺"},
+            {"name": "船乗り", "cost": 4, "expansion": "海辺"},
+            {"name": "隊商", "cost": 4, "expansion": "海辺"},
+            {"name": "封鎖", "cost": 4, "expansion": "海辺"},
+            {"name": "島", "cost": 4, "expansion": "海辺"},
+            {"name": "バザー", "cost": 5, "expansion": "海辺"},
+            {"name": "宝物庫", "cost": 5, "expansion": "海辺"},
+            {"name": "前哨地", "cost": 5, "expansion": "海辺"},
             {"name": "策士", "cost": 5, "expansion": "海辺"},
-            {"name": "巾着切り", "cost": 4, "expansion": "海辺"}
+            {"name": "商船", "cost": 5, "expansion": "海辺"},
+            {"name": "船着場", "cost": 5, "expansion": "海辺"},
+            {"name": "海の魔女", "cost": 5, "expansion": "海辺"},
+            {"name": "コルセア", "cost": 5, "expansion": "海辺"},
+            {"name": "海賊", "cost": 5, "expansion": "海辺"}
+        ]
+    }
+    {
+        "name": "錬金術",
+        "cards": [
+            {"name": "変成", "cost": "P", "expansion": "錬金術"},
+            {"name": "ブドウ園", "cost": "P", "expansion": "錬金術"},
+            {"name": "薬草商", "cost": 2, "expansion": "錬金術"},
+            {"name": "薬師", "cost": "2+P", "expansion": "錬金術"},
+            {"name": "大学", "cost": "2+P", "expansion": "錬金術"},
+            {"name": "念視の泉", "cost": "2+P", "expansion": "錬金術"},
+            {"name": "錬金術師", "cost": "3+P", "expansion": "錬金術"},
+            {"name": "使い魔", "cost": "3+P", "expansion": "錬金術"},
+            {"name": "賢者の石", "cost": "3+P", "expansion": "錬金術"},
+            {"name": "ゴーレム", "cost": "4+P", "expansion": "錬金術"},
+            {"name": "弟子", "cost": 5, "expansion": "錬金術"},
+            {"name": "支配", "cost": "6+P", "expansion": "錬金術"}
+        ]
+    }
+    {
+        "name": "繁栄",
+        "cards": [
+            {"name": "望楼", "cost": 3, "expansion": "繁栄"},
+            {"name": "金床", "cost": 3, "expansion": "繁栄"},
+            {"name": "記念碑", "cost": 4, "expansion": "繁栄"},
+            {"name": "司教", "cost": 4, "expansion": "繁栄"},
+            {"name": "労働者の村", "cost": 4, "expansion": "繁栄"},
+            {"name": "書記", "cost": 4, "expansion": "繁栄"},
+            {"name": "石切場", "cost": 4, "expansion": "繁栄"},
+            {"name": "出資", "cost": 4, "expansion": "繁栄"},
+            {"name": "ティアラ", "cost": 4, "expansion": "繁栄"},
+            {"name": "造幣所", "cost": 5, "expansion": "繁栄"},
+            {"name": "都市", "cost": 5, "expansion": "繁栄"},
+            {"name": "保管庫", "cost": 5, "expansion": "繁栄"},
+            {"name": "有力者", "cost": 5, "expansion": "繁栄"},
+            {"name": "山師", "cost": 5, "expansion": "繁栄"},
+            {"name": "大衆", "cost": 5, "expansion": "繁栄"},
+            {"name": "収集品", "cost": 5, "expansion": "繁栄"},
+            {"name": "水晶球", "cost": 5, "expansion": "繁栄"},
+            {"name": "軍用金", "cost": 5, "expansion": "繁栄"},
+            {"name": "大市場", "cost": 6, "expansion": "繁栄"},
+            {"name": "隠し財産", "cost": 6, "expansion": "繁栄"},
+            {"name": "拡張", "cost": 7, "expansion": "繁栄"},
+            {"name": "宮廷", "cost": 7, "expansion": "繁栄"},
+            {"name": "鍛造", "cost": 7, "expansion": "繁栄"},
+            {"name": "銀行", "cost": 7, "expansion": "繁栄"},
+            {"name": "行商人", "cost": "8*", "expansion": "繁栄"}
+        ]
+    }
+    {
+        "name": "収穫祭",
+        "cards": [
+            {"name": "村落", "cost": 2, "expansion": "収穫祭"},
+            {"name": "移動動物園", "cost": 3, "expansion": "収穫祭"},
+            {"name": "占い師", "cost": 3, "expansion": "収穫祭"},
+            {"name": "再建", "cost": 4, "expansion": "収穫祭"},
+            {"name": "農村", "cost": 4, "expansion": "収穫祭"},
+            {"name": "馬上槍試合", "cost": 4, "expansion": "収穫祭"},
+            {"name": "魔女娘", "cost": 4, "expansion": "収穫祭"},
+            {"name": "馬商人", "cost": 4, "expansion": "収穫祭"},
+            {"name": "収穫", "cost": 5, "expansion": "収穫祭"},
+            {"name": "狩猟団", "cost": 5, "expansion": "収穫祭"},
+            {"name": "道化師", "cost": 5, "expansion": "収穫祭"},
+            {"name": "豊穣の角笛", "cost": 5, "expansion": "収穫祭"},
+            {"name": "品評会", "cost": 6, "expansion": "収穫祭"}
+        ]
+    }
+    {
+        "name": "ギルド",
+        "cards": [
+            {"name": "蝋燭職人", "cost": 2, "expansion": "ギルド"},
+            {"name": "石工", "cost": "2+", "expansion": "ギルド"},
+            {"name": "医者", "cost": "3+", "expansion": "ギルド"},
+            {"name": "名品", "cost": "3+", "expansion": "ギルド"},
+            {"name": "助言者", "cost": 4, "expansion": "ギルド"},
+            {"name": "広場", "cost": 4, "expansion": "ギルド"},
+            {"name": "収税吏", "cost": 4, "expansion": "ギルド"},
+            {"name": "伝令官", "cost": "4+", "expansion": "ギルド"},
+            {"name": "熟練工", "cost": 5, "expansion": "ギルド"},
+            {"name": "商人ギルド", "cost": 5, "expansion": "ギルド"},
+            {"name": "肉屋", "cost": 5, "expansion": "ギルド"},
+            {"name": "パン屋", "cost": 5, "expansion": "ギルド"},
+            {"name": "予言者", "cost": 5, "expansion": "ギルド"}
         ]
     }
 ]
