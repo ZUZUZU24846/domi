@@ -2,7 +2,6 @@
     {
         "expansion": "基本",
         "cards": [
-            {"name": "鍛冶屋", "cost": 4},
             {"name": "工房", "cost": 3},
             {"name": "市場", "cost": 5},
             {"name": "庭園", "cost": 4},
