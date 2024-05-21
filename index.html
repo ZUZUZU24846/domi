@@ -10,7 +10,6 @@
     <div class="tabs">
         <button class="tablink" onclick="openTab(event, 'Main')">メイン</button>
         <button class="tablink" onclick="openTab(event, 'Expansion')">拡張セット</button>
-        <button class="tablink" onclick="openTab(event, 'Settings')">設定</button>
     </div>
 
     <div id="Main" class="tabcontent">
@@ -21,13 +20,6 @@
 
     <div id="Expansion" class="tabcontent">
         <div id="expansionList"></div>
-    </div>
-
-    <div id="Settings" class="tabcontent">
-        <button onclick="toggleUnusedCards()">未使用カードの選択</button>
-        <div id="unusedCards" style="display:none;">
-            <!-- Unused cards list will be populated here -->
-        </div>
     </div>
 
     <script src="scripts.js"></script>
