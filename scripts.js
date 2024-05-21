@@ -1,9 +1,9 @@
 let cards = []; // cards.jsonから読み込んだカードデータ
-let selectedCards = [];
+let selectedCards = []; // 現在選ばれているカード
+let expansions = {}; // 拡張セットとそのチェック状態
 
 // DOMが完全に読み込まれた後に実行
 document.addEventListener('DOMContentLoaded', () => {
-    // cards.jsonからカードデータを取得
     fetchCards();
 });
 
@@ -12,8 +12,13 @@ function fetchCards() {
     fetch('cards.json')
         .then(response => response.json())
         .then(data => {
-            cards = data.flatMap(set => set.cards.map(card => ({...card, expansion: set.expansion})));
-            // 初回表示
+            data.forEach(set => {
+                expansions[set.expansion] = true;
+                set.cards.forEach(card => {
+                    cards.push({...card, expansion: set.expansion});
+                });
+            });
+            populateExpansionList();
             selectedCards = getRandomCards(10);
             sortCardsByCost();
             displayCards();
@@ -62,18 +67,14 @@ function selectReroll() {
 
 // ランダムにカードを取得
 function getRandomCards(count, exclude = []) {
-    const filteredCards = cards.filter(card => !selectedCards.includes(card) && !exclude.includes(card));
+    const filteredCards = cards.filter(card => !exclude.includes(card) && expansions[card.expansion]);
     const shuffled = filteredCards.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
 }
 
 // コスト順にカードをソート
 function sortCardsByCost() {
-    selectedCards.sort((a, b) => {
-        const costA = parseCost(a.cost);
-        const costB = parseCost(b.cost);
-        return costA - costB;
-    });
+    selectedCards.sort((a, b) => parseCost(a.cost) - parseCost(b.cost));
 }
 
 // コストをパース
@@ -101,4 +102,24 @@ function openTab(evt, tabName) {
     }
     document.getElementById(tabName).style.display = 'block';
     evt.currentTarget.className += ' active';
+}
+
+// 拡張セットのチェックボックスを表示
+function populateExpansionList() {
+    const expansionList = document.getElementById('expansionList');
+    for (const [expansion, checked] of Object.entries(expansions)) {
+        const label = document.createElement('label');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = checked;
+        checkbox.onchange = () => toggleExpansion(expansion);
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(expansion));
+        expansionList.appendChild(label);
+    }
+}
+
+// 拡張セットの選択をトグル
+function toggleExpansion(expansion) {
+    expansions[expansion] = !expansions[expansion];
 }
